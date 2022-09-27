@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/juego.js"></script>
+</head>
+
+<body onresize="ajustarTamañoDelJuego()">
+
+    <div class="panel">
+        <div class="vidas">
+            <img id="v1" src="img/corazon_lleno.png">
+            <img id="v2" src="img/corazon_lleno.png">
+            <img id="v3" src="img/corazon_lleno.png">
+        </div>
+        <div class="reloj"> Tempo Restante: <span id="reloj"></span></div>
+
+    </div>
+
+    <script>
+        document.getElementById('reloj').innerHTML = tiempo
+
+        var crearMosquito = setInterval(function () {
+            posicaoRandomica()
+        }, crearMosquitoTiempo)
+    </script>
+</body>
+
+</html>
